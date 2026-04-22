@@ -467,7 +467,7 @@ with tabs[5]:
         if "Edu" in v: return "background-color:#1a2a1a;color:#4ade80"
         if "Labour" in v: return "background-color:#2a1a1a;color:#fb923c"
         return "background-color:#1a1a2a;color:#94a3b8"
-    st.dataframe(gdf.style.applymap(stype,subset=["Type"]),use_container_width=True,height=520)
+    st.dataframe(gdf.style.map(stype, subset=["Type"]), use_container_width=True, height=520)
 
     st.markdown("<hr class='sdiv'>",unsafe_allow_html=True)
     st.markdown("""
