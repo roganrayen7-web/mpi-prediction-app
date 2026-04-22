@@ -303,7 +303,7 @@ with tabs[2]:
     sdg1_vals=df.set_index("state").reindex(rdf["State"])["sdg1_score"].values
     rdf["SDG-1"]=sdg1_vals
     rdf["SDG-1 Tier"]=rdf["SDG-1"].apply(lambda s:"🟢 Achiever" if s>=75 else "🟡 Front-Runner" if s>=65 else "🔴 Aspirant")
-    st.dataframe(rdf[["Rank","State","Region","Actual","Predicted","Residual","SDG-1","SDG-1 Tier"]]
+    st.dataframe(rdf[["Rank","State","Region","Actual","Predicted","Residual","SDG-1","SDG-1 Tier"]])
                  df.style.map(lambda v: "color:#f43f5e" if v>0.01 else "color:#00d4aa" if v<-0.01 else "color:#94a3b8", subset=["Residual"])
                  use_container_width=True,height=500)
 
